@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>知问前端</title>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.js" ></script>
+<script type="text/javascript" src="js/jquery.ui.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/jquery.form.js" ></script>
+<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+<script type="text/javascript" src="uEditor/uEditor.js" ></script>
+<script type="text/javascript" src="js/index.js" ></script>
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+<link rel="stylesheet" href="css/smoothness/jquery.ui.css" type="text/css" />
+<link rel="stylesheet" href="uEditor/uEditor.css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body>
+	
+<!--头部-->
+<div id="header">
+	<!--头部主干部分 -->
+	<div class="header_main">
+		<h1>知问</h1>
+		<div class="header_search">
+			<input type="text" name="search" class="search" />
+		</div>
+		<div class="header_button">
+			<button id="search_button">查询</button>
+			<button id="question_button">提问</button>
+		</div>
+		<div class="header_member">
+			<a href="javascript:void(0)" id="reg_a">注册</a>
+			<a href="javascript:void(0)" id="member">用户</a>
+			| 
+			<a href="javascript:void(0)" id="login_a">登录</a>
+			<a href="javascript:void(0)" id="logout">退出</a>
+		</div>
+	</div>
+</div>
+
+<div id="main">
+	<div class="main-left">
+		<!--选项卡-->
+		<div id="tabs">
+		<ul>
+			<li><a href="tab1.html">最热门的提问</a></li>
+			<li><a href="tab2.html">小编推荐的提问</a></li>
+			<li><a href="tab3.html">评论最多的提问</a></li>
+		</ul>
+		</div>
+		
+		<!--内容-->
+		<div class="content">
+			<h4>zxy 发表于 2010-12-10</h4>
+			<h3>飞行员和空姐登机时候，行李箱里有什么？是私人物品吗？</h3>
+			<div class="editor">
+				123
+			</div>
+			<div class="bottom">0条评论 <span class="down">显示全部</span><span class="up">收起</span></div>
+			<hr noshade="noshade" size="1"/>
+		</div> 
+	</div>
+	
+	<div class="main-right">
+		<!--折叠菜单-->
+		<div id="accordion">
+			<h3>我关注的人</h3>
+			<div><p>内容1</p><p>内容1</p></div>
+			<h3>关注我的人</h3>
+			<div>内容2</div>
+			<h3>我的提问列表</h3>
+			<div>内容3</div>
+		</div>	
+	</div>
+</div>
+
+
+<!--注册表单-->
+<form id="reg" action="123.html" title="会员注册">
+	<ol class="reg_error"></ol>
+	<p>
+		<label for="user">帐号：</label>
+		<input type="text" name="user" class="text" id="user" />
+		<span class="star">*</span>
+	</p>
+	<p>
+		<label for="pass">密码：</label>
+		<input type="password" name="pass" class="text" id="pass" />
+		<span class="star">*</span>
+	</p>
+	<p>
+		<label for="email">邮箱：</label>
+		<input type="text" name="email" class="text" id="email" />
+		<span class="star">*</span>
+	</p>
+	<p>
+		<label>性别：</label>
+		<input type="radio" name="sex" value="male" id="male" checked="checked"><label for="male">男</label></input><input type="radio" name="sex" value="female" id="female"><label for="female">女</label></input>
+	</p>
+	<p>
+		<label for="date">生日：</label>
+		<input type="text" name="birthday" readonly="readonly" class="text" id="date" />
+	</p>
+</form>
+
+<!--登录表单-->
+<form id="login" title="会员登录">
+	<ol class="login_error"></ol>
+	<p>
+		<label for="user">帐号：</label>
+		<input type="text" name="user" class="text" id="login_user" />
+		<span class="star">*</span>
+	</p>
+	<p>
+		<label for="pass">密码：</label>
+		<input type="password" name="pass" class="text" id="login_pass" />
+		<span class="star">*</span>
+	</p>
+	<p>
+		<input type="checkbox" name="expires" id="expires" checked="checked" />
+		<label for="expires">登录后有效期一周</label>
+	</p>
+	
+</form>
+
+
+<!--提问表单-->
+<form id="question" title="提问">
+	<p>
+		<label for="title">问题名称</label>
+		<input type="text" name="title" style="width: 390px;" class="text" id="title" />
+	</p>
+	<p>
+		<textarea class="uEditorCustom" name="content">请输入问题描述！</textarea>
+	</p>
+</form>
+
+<div id="loading">数据交互中...</div>
+<div id="error">请登录后操作...</div>
+
+<!--尾部-->
+<div id="footer">
+	平顶山学院物联网创新实验室 | 计算机俱乐部 |  http://www.pdsu.com.cn
+</div>
+
+</body>
+</html>
